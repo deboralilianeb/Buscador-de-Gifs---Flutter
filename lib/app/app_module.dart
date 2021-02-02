@@ -1,11 +1,9 @@
-import 'package:giphys/app/modules/searchGiphy/search_giphy_controller.dart';
-import 'package:giphys/app/modules/searchGiphy/search_giphy_module.dart';
-
+import 'package:giphys/app/modules/gifs/search_giphy_controller.dart';
+import 'package:giphys/app/modules/gifs/search_giphy_page.dart';
 import 'app_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
 import 'package:giphys/app/app_widget.dart';
-import 'package:giphys/app/modules/home/home_module.dart';
 
 class AppModule extends MainModule {
   @override

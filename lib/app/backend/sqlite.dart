@@ -1,0 +1,2 @@
+const String CREATE_GIFS_TABLE_SCRIPT = "CREATE TABLE gifs(url TEXT PRIMARY KEY,titulo TEXT, autor TEXT)";
+const String DATABASE_NAME = "GIPHY";

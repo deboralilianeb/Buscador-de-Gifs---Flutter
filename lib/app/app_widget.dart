@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:giphys/app/modules/searchGiphy/search_giphy_page.dart';
+import 'package:giphys/app/modules/gifs/search_giphy_page.dart';
 
 class AppWidget extends StatelessWidget {
   @override

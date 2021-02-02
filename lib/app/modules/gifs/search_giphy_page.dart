@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:giphys/app/modules/resources/utils.dart';
-import 'package:giphys/app/modules/searchGiphy/detailsGif.dart';
+import 'package:giphys/app/modules/gifs/details_gif_page.dart';
+import 'package:giphys/app/modules/gifs/gifs_salvos_page.dart';
+import 'package:giphys/app/resources/utils.dart';
 import 'package:transparent_image/transparent_image.dart';
 import 'search_giphy_controller.dart';
 
@@ -17,22 +18,57 @@ class SearchGiphyPage extends StatefulWidget {
 class _SearchGiphyPageState
     extends ModularState<SearchGiphyPage, SearchGiphyController> {
   //use 'controller' variable to access controller
+  var gifsSalvos;
 
   @override
   void initState() {
     super.initState();
-    controller.getGifs().then((map) {
-      print(map);
+    new Future.delayed(Duration(seconds: 2), () => controller.getGifsBd())
+        .then((value) {
+      print("Carregou bd");
     });
+    controller.getGifs().then((map) {});
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Center(
+                child: Text(
+                'Meus Gifs',
+                style: TextStyle(fontSize: 20, color: cor_secundaria),
+                textAlign: TextAlign.center,
+              )),
+              decoration: BoxDecoration(
+                color: cor_principal,
+              ),
+            ),
+            ListTile(
+              title: Padding(
+                padding: EdgeInsets.all(10),
+                child:  Text('Gifs Salvos', style: TextStyle(fontSize: 15) ,),),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => GifsSalvosPagePage(),
+                    ));
+              },
+            ),
+
+            Divider(height: 20, color: cor_principal,)
+          ],
+        ),
+      ),
       appBar: AppBar(
         backgroundColor: cor_principal,
         title: Text(
-          "Search Gifs",
+          "Giphy",
           style: TextStyle(color: cor_secundaria),
         ),
         centerTitle: true,
@@ -118,8 +154,8 @@ class _SearchGiphyPageState
                   context,
                   MaterialPageRoute(
                       builder: (context) => DetailsGifPage(
-                            gifData: snapshot.data["data"][index],
-                          )));
+                          gifData: snapshot.data["data"][index],
+                          gifSalvos: controller.gifsSalvos)));
             },
             child: FadeInImage.memoryNetwork(
               placeholder: kTransparentImage,

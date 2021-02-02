@@ -33,6 +33,11 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  path:
+  path_provider:
+  sqflite:
+  toast: ^0.1.5
+  shared_preferences: ^0.4.3
   cupertino_icons: ^0.1.2
   share: ^0.6.1+1
   transparent_image: ^1.0.0
