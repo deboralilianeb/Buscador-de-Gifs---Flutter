@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:giphys/app/backend/sqlite.dart';
+import 'package:giphys/app/resources/sqlite.dart';
 import 'package:giphys/app/classes/gif.dart';
 import 'package:giphys/app/resources/guard.dart';
 import 'package:mobx/mobx.dart';
