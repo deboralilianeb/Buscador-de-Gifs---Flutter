@@ -15,7 +15,7 @@ endpoints. Consumir a API pública de desenvolvedores do Giphy para:
     
   ● Scroll infinito de gifs.
 
-O desafio também propõe a criação de funções para simular a comunicação com um backend que faça:
+O desafio também propõe a criação de funções para simular a comunicação com um backend que façam:
 
   ● Salvar os gifs capazes de matar o Senhor do Mal;
 
