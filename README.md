@@ -24,5 +24,24 @@ O desafio também propõe a criação de funções para simular a comunicação 
   ● Deletar um gif.
   
   Como opção para o backend do MVP foi utlizado o SQlite
+  
+  ## Funcionamento:
+  
+  ### Tela incial exibi um scrool de gifs com a opção de busca: 
+  (https://github.com/deboralilianeb/DesafioMed365--Finxi/blob/main/readme_images/telaInicial.jpg)
+  
+  ### Ao selecionar um gif é aberta uma página exibindo detalhes sobre o mesmo e a opção de salvar o gif:
+  (https://github.com/deboralilianeb/DesafioMed365--Finxi/blob/main/readme_images/detalhesGif.jpg)
+  
+  ### Os Gifs salvos podem ser acessados através do menu lateral presente na tela inicial: 
+  (https://github.com/deboralilianeb/DesafioMed365--Finxi/blob/main/readme_images/menu.jpg)
+  
+  ### Gifs salvos são exibidos:
+  (https://github.com/deboralilianeb/DesafioMed365--Finxi/blob/main/readme_images/gifsSalvos.jpg)
+  
+  ### Ao selecionar um gif salvo é possível editar suas informações e excluí-lo.
+  (https://github.com/deboralilianeb/DesafioMed365--Finxi/blob/main/readme_images/EditarExcluirGifsSalvos.jpg)
+  
+  
 
   
