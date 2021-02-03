@@ -1,8 +1,6 @@
 import 'dart:convert';
-
 import 'package:giphys/app/resources/sqlite.dart';
 import 'package:giphys/app/classes/gif.dart';
-import 'package:giphys/app/resources/guard.dart';
 import 'package:mobx/mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:http/http.dart' as http;
@@ -53,10 +51,10 @@ abstract class _SearchGiphyControllerBase with Store {
 
     if (_search == null || _search == "")
       response = await http
-          .get("https://api.giphy.com/v1/gifs/trending?api_key=$APIKEY");
+          .get( "https://api.giphy.com/v1/gifs/trending?api_key=N1YaOpC1oVyRvR5mmJycRbpRRgRe2RRF");
     else {
       response = await http.get(
-          "https://api.giphy.com/v1/gifs/search?api_key=$APIKEY&q=$_search&offset=$_offset&limit=39&rating=g");
+          "https://api.giphy.com/v1/gifs/search?api_key=N1YaOpC1oVyRvR5mmJycRbpRRgRe2RRF&q=$_search&offset=$_offset&limit=39&rating=g");
     }
     return json.decode(response.body);
   }
@@ -108,8 +106,7 @@ abstract class _SearchGiphyControllerBase with Store {
       }
 
       setgifsSalvos(gifs);
-    } else
-      setgifsSalvos(null);
+    } 
   }
 
   Future update(Gif model) async {
@@ -143,6 +140,10 @@ abstract class _SearchGiphyControllerBase with Store {
   }
 
   bool verificaGifSAlvo(List<Gif> gifs, String urlAtual) {
+
+    if(gifs==null){
+      return true;
+    }
     for (int i = 0; i < gifs.length; i++) {
       if (gifs[i].url == urlAtual) return false;
     }

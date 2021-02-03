@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:giphys/app/classes/gif.dart';
+import 'package:giphys/app/modules/gifs/gifs_salvos_page.dart';
 import 'package:giphys/app/modules/gifs/search_giphy_controller.dart';
 import 'package:giphys/app/resources/utils.dart';
 import 'package:toast/toast.dart';
@@ -18,12 +19,6 @@ class _EditGifPageState
     extends ModularState<EditGifPage, SearchGiphyController> {
   var dataCriacao;
   var dataExibicao;
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -151,7 +146,13 @@ class _EditGifPageState
                                                 gravity: Toast.CENTER,
                                                 duration: Toast.LENGTH_LONG);
 
-                                            Navigator.pop(context);
+                                            Navigator.pushAndRemoveUntil(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        GifsSalvosPagePage()),
+                                                (Route<dynamic> route) =>
+                                                    false);
                                           }).catchError((onError) {
                                             Toast.show(
                                                 'Erro ao fazer alterações',
@@ -187,15 +188,18 @@ class _EditGifPageState
                                             gravity: Toast.CENTER,
                                             duration: Toast.LENGTH_LONG);
 
-                                        Navigator.pop(context);
+                                        Navigator.pushAndRemoveUntil(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    GifsSalvosPagePage()),
+                                            (Route<dynamic> route) => false);
                                       }).catchError((onError) {
                                         Toast.show(
                                             'Erro ao Excluir Gif', context);
                                         print(
                                             '[ERROR] :: Erro ao salvar alterações() :: $onError');
-                                        Navigator.pop(context);
                                       });
-                                      setState(() {});
                                     },
                                   ),
                                   Text(

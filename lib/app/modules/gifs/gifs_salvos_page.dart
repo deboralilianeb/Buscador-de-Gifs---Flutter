@@ -3,15 +3,12 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:giphys/app/classes/gif.dart';
 import 'package:giphys/app/modules/gifs/edit_gif.dart';
 import 'package:giphys/app/resources/utils.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:transparent_image/transparent_image.dart';
 import 'search_giphy_controller.dart';
 
 class GifsSalvosPagePage extends StatefulWidget {
   final String title;
-  final List<Gif> gifsSalvos;
-  const GifsSalvosPagePage(
-      {Key key, this.title = "Gifs Salvos Page", this.gifsSalvos})
+  const GifsSalvosPagePage({Key key, this.title = "Gifs Salvos Page"})
       : super(key: key);
 
   @override
@@ -20,18 +17,24 @@ class GifsSalvosPagePage extends StatefulWidget {
 
 class _GifsSalvosPagePageState
     extends ModularState<GifsSalvosPagePage, SearchGiphyController> {
-
   bool carregou = false;
 
   @override
-  Widget build(BuildContext context) {
-      new Future.delayed(Duration(seconds: 2), () => controller.getGifsBd())
+  void initState() {
+    new Future.delayed(Duration(seconds: 2), () => controller.getGifsBd())
         .then((value) {
-      setState(() {
-        carregou = true;
-      });
+      if (mounted) {
+        setState(() {
+          carregou = true;
+        });
+      }
     });
-    if (carregou)
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (carregou && controller.gifsSalvos != null)
       return Scaffold(
         appBar: AppBar(
           backgroundColor: cor_principal,
@@ -74,7 +77,21 @@ class _GifsSalvosPagePageState
           ],
         ),
       );
-    else
+    else if (controller.gifsSalvos == null && carregou == true) {
+      return Scaffold(
+          appBar: AppBar(
+            backgroundColor: cor_principal,
+            title: Text(
+              "Gifs salvos",
+              style: TextStyle(color: cor_secundaria),
+            ),
+            centerTitle: true,
+          ),
+          backgroundColor: cor_principal,
+          body: Center(
+              child: Text("Nenhum Gif foi salvo",
+                  style: TextStyle(color: cor_secundaria))));
+    } else
       return Scaffold(
           appBar: AppBar(
             backgroundColor: cor_principal,

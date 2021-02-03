@@ -39,7 +39,7 @@ class _SearchGiphyPageState
           children: <Widget>[
             DrawerHeader(
               child: Center(
-                child: Text(
+                  child: Text(
                 'Meus Gifs',
                 style: TextStyle(fontSize: 20, color: cor_secundaria),
                 textAlign: TextAlign.center,
@@ -51,7 +51,11 @@ class _SearchGiphyPageState
             ListTile(
               title: Padding(
                 padding: EdgeInsets.all(10),
-                child:  Text('Gifs Salvos', style: TextStyle(fontSize: 15) ,),),
+                child: Text(
+                  'Gifs Salvos',
+                  style: TextStyle(fontSize: 15),
+                ),
+              ),
               onTap: () {
                 Navigator.push(
                     context,
@@ -60,8 +64,10 @@ class _SearchGiphyPageState
                     ));
               },
             ),
-
-            Divider(height: 20, color: cor_principal,)
+            Divider(
+              height: 20,
+              color: cor_principal,
+            )
           ],
         ),
       ),

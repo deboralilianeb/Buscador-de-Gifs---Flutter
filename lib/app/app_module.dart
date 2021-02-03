@@ -1,5 +1,4 @@
 import 'package:giphys/app/modules/gifs/search_giphy_controller.dart';
-import 'package:giphys/app/modules/gifs/search_giphy_page.dart';
 import 'app_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';

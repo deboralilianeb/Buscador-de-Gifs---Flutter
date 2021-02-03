@@ -24,3 +24,5 @@ O desafio também propõe a criação de funções para simular a comunicação 
   ● Deletar um gif.
   
   Como opção para o backend do MVP foi utlizado o SQlite
+
+  

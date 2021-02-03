@@ -5,7 +5,6 @@ import 'package:giphys/app/classes/gif.dart';
 import 'package:giphys/app/modules/gifs/search_giphy_controller.dart';
 import 'package:giphys/app/modules/gifs/search_giphy_page.dart';
 import 'package:giphys/app/resources/utils.dart';
-import 'package:sqflite/sqflite.dart';
 import 'package:toast/toast.dart';
 
 class DetailsGifPage extends StatefulWidget {
@@ -139,6 +138,7 @@ class _DetailsGifPageState
                                     tooltip: 'Salvar Gif',
                                     onPressed: () async {
                                       print(widget.gifSalvos);
+                                  
                                       if (controller.verificaGifSAlvo(
                                         widget.gifSalvos,
                                         widget.gifData["images"]["fixed_height"]
