@@ -27,7 +27,7 @@ O desafio também propõe a criação de funções para simular a comunicação 
   
   ## Funcionamento:
   
-  ### Tela incial exibi um scrool de gifs com a opção de busca: 
+  ### Tela incial exibe um scrool de gifs com a opção de busca: 
   (https://github.com/deboralilianeb/DesafioMed365--Finxi/blob/main/readme_images/telaInicial.jpg)
   
   ### Ao selecionar um gif é aberta uma página exibindo detalhes sobre o mesmo e a opção de salvar o gif:
