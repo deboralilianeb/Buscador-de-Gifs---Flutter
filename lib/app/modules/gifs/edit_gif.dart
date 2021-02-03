@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:giphys/app/classes/gif.dart';
-import 'package:giphys/app/modules/gifs/gifs_salvos_page.dart';
 import 'package:giphys/app/modules/gifs/search_giphy_controller.dart';
+import 'package:giphys/app/modules/gifs/search_giphy_page.dart';
 import 'package:giphys/app/resources/utils.dart';
 import 'package:toast/toast.dart';
 
@@ -150,7 +150,7 @@ class _EditGifPageState
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        GifsSalvosPagePage()),
+                                                        SearchGiphyPage()),
                                                 (Route<dynamic> route) =>
                                                     false);
                                           }).catchError((onError) {
@@ -192,7 +192,7 @@ class _EditGifPageState
                                             context,
                                             MaterialPageRoute(
                                                 builder: (context) =>
-                                                    GifsSalvosPagePage()),
+                                                    SearchGiphyPage()),
                                             (Route<dynamic> route) => false);
                                       }).catchError((onError) {
                                         Toast.show(
