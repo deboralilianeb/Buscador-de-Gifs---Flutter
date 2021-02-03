@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:giphys/app/classes/gif.dart';
 import 'package:giphys/app/modules/gifs/edit_gif.dart';
 import 'package:giphys/app/resources/utils.dart';
 import 'package:transparent_image/transparent_image.dart';
