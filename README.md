@@ -27,19 +27,19 @@ O desafio também propõe a criação de funções para simular a comunicação 
   
   ## Funcionamento:
   
-  ### Tela incial exibe um scrool de gifs com a opção de busca: 
+  ### [1] Tela incial exibe um scrool de gifs com a opção de busca: 
   ![alt text](https://github.com/deboralilianeb/DesafioMed365--Finxi/blob/main/readme_images/telaInicial.jpg)
   
-  ### Ao selecionar um gif é aberta uma página exibindo detalhes sobre o mesmo e a opção de salvar o gif:
+  ### [2] Ao selecionar um gif é aberta uma página exibindo detalhes sobre o mesmo e a opção de salvar o gif:
   ![alt text](https://github.com/deboralilianeb/DesafioMed365--Finxi/blob/main/readme_images/detalhesGif.jpg)
   
-  ### Os Gifs salvos podem ser acessados através do menu lateral presente na tela inicial: 
+  ### [3] Os Gifs salvos podem ser acessados através do menu lateral presente na tela inicial: 
   ![alt text](https://github.com/deboralilianeb/DesafioMed365--Finxi/blob/main/readme_images/menu.jpg)
   
-  ### Gifs salvos são exibidos:
+  ### [4] Gifs salvos são exibidos:
   ![alt text](https://github.com/deboralilianeb/DesafioMed365--Finxi/blob/main/readme_images/gifsSalvos.jpg)
   
-  ### Ao selecionar um gif salvo é possível editar suas informações e excluí-lo.
+  ### [5] Ao selecionar um gif salvo é possível editar suas informações e excluí-lo.
   ![alt text](https://github.com/deboralilianeb/DesafioMed365--Finxi/blob/main/readme_images/EditarExcluirGifsSalvos.jpg)
   
   
